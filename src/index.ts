@@ -1,1 +1,1 @@
-console.log('hello');
+throw new Error('wei');
