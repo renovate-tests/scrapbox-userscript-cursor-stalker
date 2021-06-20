@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "description": "他人のカーソルにストーキングする Scrapbpx UserScript",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
-    "dev": "TS_NODE_PROJECT='tsconfig.bin.json' node --loader ts-node/esm ./bin/dev.ts",
+    "dev": "./bin/dev.ts",
     "lint": "run-s -c lint:*",
     "lint:tsc": "run-s -c lint:tsc:*",
     "lint:tsc:src": "tsc -p tsconfig.src.json --noEmit",

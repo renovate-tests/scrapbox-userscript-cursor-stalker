@@ -1,6 +1,13 @@
 // 🙏 "Solution Style" tsconfig.json 🙏
 // ref: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html#support-for-solution-style-tsconfigjson-files
 {
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
   "files": [],
   "references": [{ "path": "./tsconfig.src.json" }, { "path": "./tsconfig.bin.json" }]
 }
