@@ -10,11 +10,17 @@ const config = {
   output: {
     dir: 'dist',
     format: 'es',
+    // Page#addScriptTag で差し込む都合上、bundle ファイルに sourcemap が埋め込まれている必要がある
+    sourcemap: 'inline',
   },
   plugins: [
     resolve({ extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
     commonjs(),
-    typescript({ tsconfig: 'tsconfig.src.json', sourceMap: false }),
+    typescript({
+      tsconfig: 'tsconfig.src.json',
+      // ref: https://github.com/rollup/plugins/issues/260#issuecomment-601551228
+      inlineSources: true,
+    }),
   ],
 };
 
